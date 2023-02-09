@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!--
+        -StackLayout stacks items
+        -AbsoluteLayout [deprecated] positions the items absolutely using coordinates
+        -RelativeLayout layers things relative to their size and other elements' positions
+        -GridLayout positions the items in a grid
+        -ContentView is similar to frame and meant to position a single piece of content
+        -ScrollView for scrolling
+        -Frame frames the content, used for singular items
+        -ConstraintLayout
+    -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!\nHello World!"
+        android:padding="12dp"
+        android:layout_margin="12dp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

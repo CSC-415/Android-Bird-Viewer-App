@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--
+        All elements within a constraint layout are children of that layout.
+        This means that all children in the layout must be given a constraint for the
+        layout to work with.
+
+        On a phone screen, there is the top, bottom, left, and right of the screen. The
+        left and right ends of the screen are known as start and end respectively. To
+        center,
+
+    -->
+
+    <Button
+        android:id="@+id/ok_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Okay"
+        app:layout_constraintTop_toTopOf="@id/cancel_button"
+        app:layout_constraintEnd_toStartOf="@id/cancel_button"
+        android:layout_marginEnd="16dp"
+        android:padding="10dp"/>
+
+    <Button
+        android:id="@+id/cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        app:layout_constraintTop_toBottomOf="@id/text_box"
+        app:layout_constraintEnd_toEndOf="@id/text_box"
+        android:layout_margin="4dp"
+        android:layout_marginTop="16dp"
+        android:padding="10dp"/>
+
+    <TextView
+        android:id="@+id/text_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  As I walk through the valley of the shadow of death I take a look at my life and realize there's nothin' left 'Cause I've been blastin' and laughin' so long, that Even my mama thinks that my mind is gone But I ain't never crossed a man that didn't deserve it Me be treated like a punk, you know that's unheard of You better watch how you're talkin', and where you're walkin' Or you and your homies might be lined in chalk I really hate to trip but I gotta loc As they croak, I see myself in the pistol smoke, fool I'm the kinda G the little homies wanna be like On my knees in the night, sayin' prayers in the streetlight"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginHorizontal="12dp"
+        android:padding="4dp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

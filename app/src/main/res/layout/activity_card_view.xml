@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="16dp"
+    android:elevation="8dp">
+    <!--    Always use recycler view for list items-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_bg">
+
+        <!--Use tools:text for non-user text (debugging, placeholder, preview, etc.)-->
+
+        <ImageView
+            android:id="@+id/champion_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            tools:src="@drawable/karma"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp"
+            android:contentDescription="@string/champion_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/champion_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold|italic"
+            tools:text="Champion: Karma"
+            android:paddingEnd="10dp"
+            android:paddingTop="12dp"
+            app:layout_constraintStart_toEndOf="@id/champion_image"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/champion_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold|italic"
+            tools:text="Riot ID: 43"
+            android:paddingEnd="10dp"
+            android:paddingTop="9dp"
+            app:layout_constraintStart_toStartOf="@id/champion_name"
+            app:layout_constraintTop_toBottomOf="@id/champion_name"/>
+
+        <TextView
+            android:id="@+id/champion_winrate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold|italic"
+            tools:text="Winrate: 100%"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="12dp"
+            app:layout_constraintStart_toEndOf="@id/champion_name"
+            app:layout_constraintTop_toTopOf="@id/champion_name"/>
+
+        <TextView
+            android:id="@+id/champion_role"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold|italic"
+            tools:text="Main Role: Support"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="9dp"
+            app:layout_constraintStart_toStartOf="@id/champion_winrate"
+            app:layout_constraintTop_toBottomOf="@id/champion_winrate"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
