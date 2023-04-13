@@ -18,7 +18,7 @@
         <!--Use tools:text for non-user text (debugging, placeholder, preview, etc.)-->
 
         <ImageView
-            android:id="@+id/champion_image"
+            android:id="@+id/bird_image"
             android:layout_width="80dp"
             android:layout_height="80dp"
             tools:src="@drawable/karma"
@@ -30,29 +30,29 @@
             app:layout_constraintBottom_toBottomOf="parent"/>
 
         <TextView
-            android:id="@+id/champion_name"
+            android:id="@+id/bird_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold|italic"
             tools:text="Champion: Karma"
             android:paddingEnd="10dp"
             android:paddingTop="12dp"
-            app:layout_constraintStart_toEndOf="@id/champion_image"
+            app:layout_constraintStart_toEndOf="@id/bird_image"
             app:layout_constraintTop_toTopOf="parent"/>
 
         <TextView
-            android:id="@+id/champion_id"
+            android:id="@+id/bird_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold|italic"
             tools:text="Riot ID: 43"
             android:paddingEnd="10dp"
             android:paddingTop="9dp"
-            app:layout_constraintStart_toStartOf="@id/champion_name"
-            app:layout_constraintTop_toBottomOf="@id/champion_name"/>
+            app:layout_constraintStart_toStartOf="@id/bird_name"
+            app:layout_constraintTop_toBottomOf="@id/bird_name"/>
 
         <TextView
-            android:id="@+id/champion_winrate"
+            android:id="@+id/bird_sci_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold|italic"
@@ -60,11 +60,11 @@
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
             android:paddingTop="12dp"
-            app:layout_constraintStart_toEndOf="@id/champion_name"
-            app:layout_constraintTop_toTopOf="@id/champion_name"/>
+            app:layout_constraintStart_toEndOf="@id/bird_name"
+            app:layout_constraintTop_toTopOf="@id/bird_name"/>
 
         <TextView
-            android:id="@+id/champion_role"
+            android:id="@+id/bird_order"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold|italic"
@@ -72,8 +72,8 @@
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
             android:paddingTop="9dp"
-            app:layout_constraintStart_toStartOf="@id/champion_winrate"
-            app:layout_constraintTop_toBottomOf="@id/champion_winrate"/>
+            app:layout_constraintStart_toStartOf="@id/bird_sci_name"
+            app:layout_constraintTop_toBottomOf="@id/bird_sci_name"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

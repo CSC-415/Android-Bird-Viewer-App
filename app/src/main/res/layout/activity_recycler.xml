@@ -6,7 +6,7 @@
     android:background="@color/purple_200">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/champion_recycler_view"
+        android:id="@+id/bird_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"

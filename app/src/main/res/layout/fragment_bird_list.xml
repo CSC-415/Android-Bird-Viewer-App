@@ -4,11 +4,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.ChampionListFragment"
+    tools:context=".ui.BirdListFragment"
     android:background="@color/purple_200">
 
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:visibility="visible"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/error_message"
+        android:text="An unknown error occurred"/>
+
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/champion_recycler_view"
+        android:id="@+id/bird_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"

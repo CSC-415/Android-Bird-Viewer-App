@@ -3,13 +3,11 @@ package com.example.csc415randyharrisapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.commit
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.csc415randyharrisapp.ui.ChampionDetailFragment
-import com.example.csc415randyharrisapp.ui.ChampionListFragment
-import kotlin.random.Random
+import com.example.csc415randyharrisapp.databinding.ActivityMainBinding
+import com.example.csc415randyharrisapp.ui.BirdListFragment
+import dagger.hilt.android.AndroidEntryPoint
 
-//Add, Commit, Push, Add, Commit, Push, Add, Commit, Push, Add, Commit, Push Ainsane Clown Posse
+//Add, Commit, Push, Add, Commit, Push, Add, Commit, Push, Add, Commit, Push, Ainsane Clown Posse
 //Fragment lifecycle:
 //onAttach() - must be attached to an activity to begin
 //onCreate() - once created, do
@@ -24,18 +22,26 @@ import kotlin.random.Random
 //onDestroy() - once destroyed, do
 //onDetach() - once detached, do
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
+
+    //lateinit won't be instantiated now, but will be at some point.
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+
+        setContentView(binding.root)
 
         //Can also use .commit
 //            .beginTransaction()
-//            .add(R.id.fragment_container_view, ChampionListFragment())
+//            .add(R.id.fragment_container_view, BirdListFragment())
 //            .commit()
         //CTRL ALT L for reformatting code
         supportFragmentManager.commit {
-            add(R.id.fragment_container_view, ChampionListFragment())
+            setReorderingAllowed(true)
+            add(R.id.fragment_container_view, BirdListFragment())
         }
     }
 }
