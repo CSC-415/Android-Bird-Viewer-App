@@ -1,6 +1,7 @@
 package com.example.csc415randyharrisapp.ui
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -69,6 +70,7 @@ class BirdListFragment : Fragment() {
                         binding.errorMessage.isVisible = false
                     }
                     is BirdViewModel.BirdEvent.Success -> {
+                        Log.d("BIG SUCCESS", "weeeee")
                         birdAdapter.refreshData(event.birds)
                         binding.progressBar.isVisible = false
                         binding.errorMessage.isVisible = false

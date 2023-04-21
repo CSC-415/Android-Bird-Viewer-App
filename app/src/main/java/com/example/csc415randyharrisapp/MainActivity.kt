@@ -2,6 +2,7 @@ package com.example.csc415randyharrisapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.commit
 import com.example.csc415randyharrisapp.databinding.ActivityMainBinding
 import com.example.csc415randyharrisapp.ui.BirdListFragment
@@ -29,6 +30,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        Log.d("This is oncreate", "hi1")
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
 
@@ -42,6 +44,7 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager.commit {
             setReorderingAllowed(true)
             add(R.id.fragment_container_view, BirdListFragment())
+            Log.d("This is oncreate", "hi2")
         }
     }
 }

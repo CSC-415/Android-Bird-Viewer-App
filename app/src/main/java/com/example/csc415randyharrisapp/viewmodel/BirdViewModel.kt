@@ -1,9 +1,11 @@
 package com.example.csc415randyharrisapp.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.csc415randyharrisapp.model.Bird
-import com.example.csc415randyharrisapp.data.model.BirdResponse
+import com.example.csc415randyharrisapp.data.model.NuthatchResponse
+import com.example.csc415randyharrisapp.data.model.NuthatchSingleResponse
 import com.example.csc415randyharrisapp.data.repository.BirdRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -19,10 +21,11 @@ class BirdViewModel @Inject constructor(
     val birds: StateFlow<BirdEvent> = _birds
 
     fun fillData(){
+        Log.d("its fillin", "weee")
         viewModelScope.launch {
             when ( val result = birdRepository.getBirds()){
-                BirdResponse.Failure -> _birds.value = BirdEvent.Failure
-                is BirdResponse.Success -> _birds.value = BirdEvent.Success(result.birds)
+                NuthatchResponse.Failure -> _birds.value = BirdEvent.Failure
+                is NuthatchResponse.Success -> _birds.value = BirdEvent.Success(result.birds)
             }
         }
     }

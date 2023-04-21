@@ -1,6 +1,7 @@
 package com.example.csc415randyharrisapp.ui.adapter
 
 import android.annotation.SuppressLint
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -16,12 +17,13 @@ class BirdAdapter(private val onItemClick: (bird: Bird, adapterPosition: Int) ->
         setHasStableIds(true)
     }
 
-    private val birds = mutableListOf<Bird>()
+    private var birds = mutableListOf<Bird>()
 
     @SuppressLint("NotifyDataSetChanged")
     fun refreshData(birdList: List<Bird>){
         birds.clear()
-        birds.addAll(birdList.subList(0, 20))
+        birds.addAll(birdList)
+        Log.d("Refreshing data...", birdList.toString())
         notifyDataSetChanged()
     }
 
@@ -54,10 +56,15 @@ class BirdAdapter(private val onItemClick: (bird: Bird, adapterPosition: Int) ->
         }
 
         fun bind(bird: Bird) {
+            var birdImage = ""
+            if(bird.images?.size!! >= 1){
+                birdImage = bird.images[0]
+            }
             Glide
                 .with(binding.root)
-                .load(bird.images?.get(0))
-                .error(R.drawable.baseline_10k_24)
+                .load(birdImage)
+                .override(80, 80)
+                .error(R.drawable.confused_seagull)
                 .into(binding.birdImage)
 
             binding.birdName.text = bird.name

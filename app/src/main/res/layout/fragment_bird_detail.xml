@@ -11,18 +11,18 @@
         android:id="@+id/bird_image"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:contentDescription="@string/karma_champion_icon"
+        android:contentDescription="@string/bird_image_desc"
         android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/bird_family"
+        android:id="@+id/bird_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:text="@string/karma_blurb"
+        tools:text="635"
         android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/bird_image" />
@@ -34,8 +34,8 @@
         android:padding="10dp"
         android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/bird_family"
-        tools:text="Champion Name: Karma" />
+        app:layout_constraintTop_toBottomOf="@id/bird_id"
+        tools:text="Name: Eagle" />
 
     <TextView
         android:id="@+id/bird_order"
@@ -45,27 +45,17 @@
         android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/bird_name"
-        tools:text="Main Role: Support" />
+        tools:text="Order: Caniac Combo" />
 
     <TextView
-        android:id="@+id/bird_status"
+        android:id="@+id/bird_family"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:text="@string/test_secondary_role"
+        tools:text="Family: Fam"
         android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/bird_order" />
-
-    <TextView
-        android:id="@+id/bird_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:textStyle="bold|italic"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/bird_status"
-        tools:text="RIOT ID: 43" />
 
     <TextView
         android:id="@+id/bird_sci_name"
@@ -74,8 +64,18 @@
         android:padding="10dp"
         android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/bird_id"
-        tools:text="Winrate: 100%" />
+        app:layout_constraintTop_toBottomOf="@id/bird_family"
+        tools:text="Scientific Name: Birdius birdius" />
+
+    <TextView
+        android:id="@+id/bird_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bird_sci_name"
+        tools:text="Conservation Status: Coolio" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
