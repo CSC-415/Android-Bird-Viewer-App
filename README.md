@@ -1,9 +1,6 @@
 This is a simple android app that presents a list of birds and their statistics across various categories.
 The data in this app utilizes the Nuthatch API, which can be found here: https://nuthatch.lastelm.software/
 
-This is a simple android app that presents a list of birds and their statistics across various categories.
-The data in this app utilizes the Nuthatch API, which can be found here: https://nuthatch.lastelm.software/
-
 Copyright 2024 Randall J Harris
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), 
